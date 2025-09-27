@@ -15,6 +15,9 @@ func host_call(command: String, args: Array = []):
 	else:
 		print("Host Error: Communication channel not set up. Cannot call host.")
 
+func switch_scene_button_clicked():
+	host_call("switch_scene", ["test.scn"])
+
 # --- HOST CALLBACKS (REQUIRED) ---
 
 # Utility to check if a download failed (returns true if data is empty)
